@@ -1014,6 +1014,45 @@ html, body {
   border: 2.5px solid rgba(255, 255, 255, 0.95);
 }
 
+.cake-countdown {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: clamp(6rem, 24vw, 9rem);
+  aspect-ratio: 1;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: rgba(164, 35, 75, 0.82);
+  color: #fff;
+  font-family: var(--font-script);
+  font-size: clamp(5rem, 19vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 4px 18px rgba(70, 10, 30, 0.55);
+  box-shadow: 0 12px 36px rgba(90, 15, 42, 0.35);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: cakeCountdownPop 0.9s cubic-bezier(0.2, 0.85, 0.25, 1.25) both;
+}
+
+@keyframes cakeCountdownPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.16);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @media (max-width: 480px) {
   .cake-real-photo    { max-height: 45vh; }
 }

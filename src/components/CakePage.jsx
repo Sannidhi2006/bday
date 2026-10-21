@@ -57,6 +57,7 @@ const MELODY_SEQUENCE = [
 
 export default function CakePage({ onNext, onPrev }) {
   const [candlesBlown, setCandlesBlown] = useState(false);
+  const [countdown, setCountdown] = useState(3);
   const [isPlayingMelody, setIsPlayingMelody] = useState(false);
   const [melodyFinished, setMelodyFinished] = useState(false);
   const [audioError, setAudioError] = useState(false);
@@ -66,6 +67,14 @@ export default function CakePage({ onNext, onPrev }) {
   const activeNodesRef = useRef([]);
   const timersRef = useRef([]);
   const isStartedRef = useRef(false);
+
+  useEffect(() => {
+    if (countdown === null) return undefined;
+    const timer = setTimeout(() => {
+      setCountdown((value) => (value === 1 ? null : value - 1));
+    }, 900);
+    return () => clearTimeout(timer);
+  }, [countdown]);
 
   // Cleanup on unmount: stop oscillators, clear timers, close AudioContext
   useEffect(() => {
@@ -255,6 +264,11 @@ export default function CakePage({ onNext, onPrev }) {
             }
           }}
         />
+        {countdown !== null && !candlesBlown && (
+          <div key={countdown} className="cake-countdown" aria-live="assertive">
+            {countdown}
+          </div>
+        )}
       </div>
 
       {/* Message After Blowing */}
@@ -285,7 +299,7 @@ export default function CakePage({ onNext, onPrev }) {
 
       {/* Buttons */}
       <div className="navigation-buttons-row" style={{ marginTop: '0.8rem' }}>
-        {!candlesBlown && (
+        {!candlesBlown && countdown === null && (
           <button
             type="button"
             onClick={handleBlowCandles}
