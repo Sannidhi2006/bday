@@ -5,6 +5,13 @@ export default function BirthdayWelcomePage({ onNext }) {
 
   return (
     <div className="welcome-root" aria-label="Birthday Welcome for Cuttu">
+      <audio
+        src={`${import.meta.env.BASE_URL}audio/haareya.mpeg`}
+        autoPlay
+        loop
+        preload="auto"
+      />
+
       {/* ── BACKGROUND LAYER ── */}
       {imageError ? (
         <div className="welcome-fallback-bg" aria-hidden="true" />
