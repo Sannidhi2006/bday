@@ -11,7 +11,7 @@ export default function BirthdayWelcomePage({ onNext }) {
       ) : (
         <div className="welcome-img-bg" aria-hidden="true">
           <img
-            src="/images/cuttu.jpg"
+            src={`${import.meta.env.BASE_URL}images/cuttu.jpg`}
             alt=""
             className="welcome-bg-img"
             onError={() => setImageError(true)}

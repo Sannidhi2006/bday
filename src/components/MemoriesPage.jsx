@@ -62,7 +62,7 @@ export default function MemoriesPage() {
           {/* Main Heart Collage Image */}
           <div className="pinterest-image-wrapper">
             <img
-              src="/images/heart-collage.jpg"
+              src={`${import.meta.env.BASE_URL}images/heart-collage.jpg`}
               alt="Heart photo collage of our sweetest memories"
               className="pinterest-collage-img"
               loading="lazy"
@@ -99,7 +99,7 @@ export default function MemoriesPage() {
               ✕
             </button>
             <img
-              src="/images/heart-collage.jpg"
+              src={`${import.meta.env.BASE_URL}images/heart-collage.jpg`}
               alt="Heart photo collage full view"
               className="lightbox-image"
             />

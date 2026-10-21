@@ -243,13 +243,13 @@ export default function CakePage({ onNext, onPrev }) {
       {/* ── Cuttu's birthday photo — small, below subtitle, above button ── */}
       <div className="cake-photo-wrapper">
         <img
-          src="/images/cake.jpeg"
+          src={`${import.meta.env.BASE_URL}images/cake.jpeg`}
           alt="Cuttu with his birthday cake"
           className="cake-real-photo"
           onError={e => {
             // Try .jpg fallback if .jpeg fails
             if (e.currentTarget.src.includes('.jpeg')) {
-              e.currentTarget.src = '/images/cake.jpg';
+              e.currentTarget.src = `${import.meta.env.BASE_URL}images/cake.jpg`;
             } else {
               e.currentTarget.style.display = 'none';
             }

@@ -105,7 +105,7 @@ export default function LoveLetterPage({ onNext }) {
           {/* Background beach photo filling card with exact proportions */}
           <div className="letter-photo-bg-wrap" aria-hidden="true">
             <img
-              src="/images/letter-bg.jpg"
+              src={`${import.meta.env.BASE_URL}images/letter-bg.jpg`}
               alt="Us at the beach"
               className="letter-photo-bg-img"
             />

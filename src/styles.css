@@ -164,7 +164,7 @@ html, body {
 
 .app-container.page-letter-mode {
   background-color: #fbdde7;
-  background-image: url('/images/envelope-bg.jpg');
+  background-image: var(--letter-bg);
   background-position: center;
   background-size: auto 115dvh;
   background-position: center top;

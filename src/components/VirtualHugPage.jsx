@@ -164,7 +164,7 @@ export default function VirtualHugPage({ onNext }) {
           {/* Warm Virtual Hug Hugging Bears Image */}
           <div className="hug-image-wrapper">
             <img
-              src="/images/hug.jpg"
+              src={`${import.meta.env.BASE_URL}images/hug.jpg`}
               alt="Cute virtual hug"
               className="hug-image"
               loading="lazy"

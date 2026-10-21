@@ -67,7 +67,10 @@ export default function App() {
   };
 
   return (
-    <main className={`app-container ${page === 2 || page === 5 ? 'page-welcome-mode' : ''} ${page === 4 ? 'page-letter-mode' : ''}`}>
+    <main
+      className={`app-container ${page === 2 || page === 5 ? 'page-welcome-mode' : ''} ${page === 4 ? 'page-letter-mode' : ''}`}
+      style={page === 4 ? { '--letter-bg': `url("${import.meta.env.BASE_URL}images/envelope-bg.jpg")` } : undefined}
+    >
       {/* Gentle slow floating hearts layer (pointer-events: none) */}
       <FloatingHearts count={7} />
 

@@ -6,7 +6,7 @@ export default function ShayariPage({ onNext }) {
       {/* ── AMBIENT BACKGROUND: Soft blur filling widescreen gaps ── */}
       <div className="shayari-ambient-bg" aria-hidden="true">
         <img
-          src="/images/shayari-bg.jpg"
+          src={`${import.meta.env.BASE_URL}images/shayari-bg.jpg`}
           alt=""
           className="shayari-ambient-img"
         />
@@ -15,7 +15,7 @@ export default function ShayariPage({ onNext }) {
       {/* ── PHOTO STAGE: Fits the complete 720x943 photo properly without cropping ── */}
       <div className="shayari-photo-stage">
         <img
-          src="/images/shayari-bg.jpg"
+          src={`${import.meta.env.BASE_URL}images/shayari-bg.jpg`}
           alt="Us together"
           className="shayari-main-photo"
         />
