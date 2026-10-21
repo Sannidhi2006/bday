@@ -163,7 +163,7 @@ export default function CakePage({ onNext, onPrev }) {
 
       // Master output gain
       const masterGain = ctx.createGain();
-      masterGain.gain.setValueAtTime(0.28, ctx.currentTime);
+      masterGain.gain.setValueAtTime(0.65, ctx.currentTime);
       masterGain.connect(ctx.destination);
 
       let scheduleCursor = ctx.currentTime + 0.02;
