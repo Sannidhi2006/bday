@@ -29,9 +29,6 @@ export default function LoveLetterPage({ onNext }) {
            CLOSED ENVELOPE PRESENTATION
            ======================================================== */
         <div>
-          <p className="envelope-instruction-text">
-            Tap the envelope to open your heart 💗
-          </p>
 
           <button
             type="button"
@@ -41,6 +38,7 @@ export default function LoveLetterPage({ onNext }) {
             id="btn-open-envelope"
           >
             <div className="envelope-box">
+              <span className="envelope-instruction-text">Tap the envelope</span>
               {/* Postage Stamp */}
               <div className="envelope-stamp" aria-hidden="true">
                 <span>💌</span>
