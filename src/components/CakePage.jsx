@@ -252,7 +252,7 @@ export default function CakePage({ onNext, onPrev }) {
       {/* ── Cuttu's birthday photo — small, below subtitle, above button ── */}
       <div className="cake-photo-wrapper">
         <img
-          src={`${import.meta.env.BASE_URL}images/cake.jpeg`}
+          src={`${import.meta.env.BASE_URL}images/${candlesBlown ? 'blown.jpeg' : 'cake.jpeg'}`}
           alt="Cuttu with his birthday cake"
           className="cake-real-photo"
           onError={e => {
